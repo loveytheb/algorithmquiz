@@ -21,5 +21,3 @@ for _ in range(T):
         print('S')
     elif sebi:
         print('B')
-    else:
-        print('C')
