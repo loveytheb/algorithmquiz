@@ -12,12 +12,14 @@ for _ in range(T):
     
     while sejun and sebi:
         if sejun[0] >= sebi[0]: # 세준 병사의 힘이 세비 병사의 힘과 같거나 더 강한 경우
-            sebi.pop(0) # 세비 병사 제거
+            sebi.pop() # 세비 병사 제거
         else: # 세비의 병사가 더 강한 경우
-            sejun.pop(0)# 세준 병사 제거
+            sejun.pop() # 세준 병사 제거
     
     # 남은 병사 수 확인하여 결과 출력
     if sejun:
         print('S')
     elif sebi:
-        print('B')    
+        print('B')
+    else:
+        print('C')
