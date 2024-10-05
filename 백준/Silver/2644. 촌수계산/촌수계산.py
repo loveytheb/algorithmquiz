@@ -1,4 +1,6 @@
 from collections import deque
+import sys
+input = sys.stdin.readline
 
 n = int(input()) # 사람의 수
 a, b = map(int, input().split()) # 촌수를 계산할 두 사람
