@@ -1,6 +1,4 @@
 import sys
-from collections import defaultdict
-
 input = sys.stdin.readline
 
 T = int(input()) # 테스트 케이스 개수
