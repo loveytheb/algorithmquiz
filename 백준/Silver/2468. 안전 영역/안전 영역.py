@@ -22,10 +22,10 @@ def bfs(x, y, height, visited):
                     queue.append((nx, ny))
                     
 
-max_height = max(map(max, field))
+max_height = max(map(max, field)) # 각 줄에서 가장 큰 값 중에 max값
 max_safe_areas = 0 # 최대 높이 안전 영역
 
-for height in range(max_height + 1):
+for height in range(max_height + 1): # 0 ~ max_height까지
     visited = [[False] * N for _ in range(N)]
     safe_areas = 0 # 현재 높이 안전 영역
     
