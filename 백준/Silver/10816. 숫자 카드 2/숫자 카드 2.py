@@ -1,20 +1,17 @@
 import sys
-from collections import defaultdict
+from collections import Counter
 
 input = sys.stdin.readline
 
-N = int(input().strip()) # 상근이가 가지고 있는 카드 개수
-cards = list(map(int, input().strip().split())) # 상근이가 가지고 있는 카드 종류
-M = int(input().strip()) # 상근이가 몇 개 가지고 있는 카드인지 구해야 할 개수
-queries = list(map(int, input().strip().split())) # 확인할 카드 목록
+# 입력 처리
+N = int(input().strip())
+cards = list(map(int, input().strip().split()))
+M = int(input().strip())
+queries = list(map(int, input().strip().split()))
 
-count_cards = defaultdict(int)
-for card in cards:
-    count_cards[card] += 1
+# Counter로 카드의 개수를 센다
+count_cards = Counter(cards)
 
-result = []
-for query in queries:
-    count = count_cards[query] # 해당 쿼리 카드 개수
-    result.append(count)
-
+# 각 쿼리에 대해 해당 카드의 개수를 출력한다
+result = [count_cards[query] for query in queries]
 print(' '.join(map(str, result)))
